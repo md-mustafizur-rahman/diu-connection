@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box
+}
+.main {
+    width: 600px;
+    margin: 100px auto;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Pacifico', cursive;
+  }
+  .single-form {
+    margin-bottom: 25px;
+  }
+  .single-form label {
+    display: block;
+    font-size: 22px;
+  }
+  .single-form input, .single-form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 7px;
+  }
+  .single-form input[type="submit"] {
+    background-color: #00a3fe;
+    border: 0;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
