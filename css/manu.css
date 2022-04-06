@@ -86,9 +86,12 @@ i{
   height: 70%;
   outline: none;
   border: 1px solid black;
+  border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  border: none;
+  box-shadow: 2px 2px 5px black;
   
  
 }
