@@ -42,7 +42,7 @@
                         <form action="main.php" method="POST">
                             <div class="innercontentheader">
                                 <div class="profileimg">
-                                    <img style="width: 60%;" src="https://cdn-icons.flaticon.com/png/512/3001/premium/3001764.png?token=exp=1649247995~hmac=44f305bc8b776b6c98fdb63aaa24e471" alt="">
+                                    <img style="width: 60%;" src="https://cdn-icons.flaticon.com/png/512/506/premium/506185.png?token=exp=1649265976~hmac=95f03248e3b555316bd235175f707f54" alt="">
                                 </div>
                                 <div class="postsendarea">
                                     <input placeholder="Create a new Qustions" class="postform" type="text" name="post" value="">
