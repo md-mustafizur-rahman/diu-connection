@@ -5,6 +5,9 @@
 This is a social media related application like Qura
 
 font-family: 'Poppins', sans-serif;
+
 font-family: 'Pacifico', cursive;
+
 background-color: #00a3fe;
+
 color: white;
