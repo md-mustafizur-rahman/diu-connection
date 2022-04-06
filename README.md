@@ -6,3 +6,14 @@ Notice:
  
  Working resource:
 our primary Color:#00a3fe
+Font
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+Primary Font:
+font-family: 'Poppins', sans-serif;
+
+Title Font:
+font-family: 'Pacifico', cursive;
+
