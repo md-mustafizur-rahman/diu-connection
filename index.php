@@ -47,19 +47,61 @@ if (isset($_POST['postbotton'])) {
                             <div class="profileimg">
                                 <img style="width: 60%;" src="https://cdn-icons.flaticon.com/png/512/3001/premium/3001764.png?token=exp=1649247995~hmac=44f305bc8b776b6c98fdb63aaa24e471" alt="">
                             </div>
-<div class="postsendarea">
-                            <input placeholder="Create a new Qustions" class="postform" type="text" name="post" value="">
+                            <div class="postsendarea">
+                                <input placeholder="Create a new Qustions" class="postform" type="text" name="post" value="">
 
 
-                            <button name="postbotton" name="postsubmit" class="postbtn">
-                                <i id="sendicon" class="fa-solid fa-paper-plane"></i>
-                            </button>
+                                <button name="postbotton" name="postsubmit" class="postbtn">
+                                    <i id="sendicon" class="fa-solid fa-paper-plane"></i>
+                                </button>
                             </div>
 
                         </div>
                     </form>
                 </div>
 
+                <div class="postcontent" name="postcontent">
+                    <div class="postcontentinner">
+                        <div class="postcontentheader">
+                            <img class="postcontentheaderimg" src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="">
+                            <h2 class="postcontentheaderusername">MD. Mustafizur Rahman </h2>
+                        </div>
+                        <div class="qustioncontent">
+                            <p><?php echo $postform ?></p>
+                        </div>
+                        <div class="answerarea">
+                            <!-- This Botton will submit the answer. -->
+
+                            <button class="answerbtn" name="answerbtn">ANSWER</button>
+
+                            <!-- This Botton will view other people answew. -->
+
+                            <button class="answerbtn" name="viewbtn">VIEW</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="postcontent" name="postcontent">
+                    <div class="postcontentinner">
+                        <div class="postcontentheader">
+                            <img class="postcontentheaderimg" src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="">
+                            <h2 class="postcontentheaderusername">MD. Mustafizur Rahman </h2>
+                        </div>
+                        <div class="qustioncontent">
+                            <p><?php echo $postform ?></p>
+                        </div>
+                        <div class="answerarea">
+                            <!-- This Botton will submit the answer. -->
+
+                            <button class="answerbtn" name="answerbtn">ANSWER</button>
+
+                            <!-- This Botton will view other people answew. -->
+
+                            <button class="answerbtn" name="viewbtn">VIEW</button>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="postcontent" name="postcontent">
                     <div class="postcontentinner">
                         <div class="postcontentheader">

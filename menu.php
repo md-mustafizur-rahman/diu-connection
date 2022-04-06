@@ -50,16 +50,16 @@
 
             <li class="innericon">
               <a href="#">
-              <i class="fa-solid fa-user fa-2x"></i>
+                <i class="fa-solid fa-user fa-2x"></i>
               </a>
             </li>
-            
+
             <li class="innericon">
               <a href="#">
                 <i class="fa-solid fa-bell fa-2x"></i>
               </a>
             </li>
-           
+
 
 
 
@@ -78,12 +78,12 @@
         </div>
 
         <div class="navouter" id="profileid">
-          
-    
+
+
           <button class="logout">Logout</button>
         </div>
 
-      
+
 
 
       </div>
