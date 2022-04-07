@@ -29,3 +29,6 @@
     font-size: 22px;
     cursor: pointer;
   }
+  .error {
+    color: #00a3fe;
+  }

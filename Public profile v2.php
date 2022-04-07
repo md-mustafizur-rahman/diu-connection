@@ -10,8 +10,8 @@
   <body>
   <?php
 // define variables and set to empty values
-$nameErr = $emailErr =  "";
-$name = $email =  "";
+$nameErr = $public_emailErr = $urlErr = "";
+$name = $public_email = $url = $bio = $twitter_username = $linkedIn_username = $facebook_username = $department = $location = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -24,36 +24,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
   
-  if (empty($_POST["email"])) {
+  if (empty($_POST["public_email"])) {
     $emailErr = "Email is required";
   } else {
-    $email = test_input($_POST["email"]);
+    $public_email = test_input($_POST["public_email"]);
     // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
+    if (!filter_var($public_email, FILTER_VALIDATE_EMAIL)) {
+      $public_emailErr = "Invalid email format";
     }
   }
     
-  if (empty($_POST["website"])) {
-    $website = "";
+  if (empty($_POST["url"])) {
+    $url = "";
   } else {
-    $website = test_input($_POST["website"]);
+    $url = test_input($_POST["url"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL";
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$url)) {
+      $urlErr = "Invalid URL";
     }
   }
 
-  if (empty($_POST["comment"])) {
-    $comment = "";
+  if (empty($_POST["bio"])) {
+    $bio = "";
   } else {
-    $comment = test_input($_POST["comment"]);
+    $bio = test_input($_POST["bio"]);
   }
 
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+  if (empty($_POST["twitter_username"])) {
+    $twitter_username = "";
   } else {
-    $gender = test_input($_POST["gender"]);
+    $twitter_username = test_input($_POST["twitter_username"]);
+  }
+
+  if (empty($_POST["linkedIn_username"])) {
+    $linkedIn_username = "";
+  } else {
+    $linkedIn_username = test_input($_POST["linkedIn_username"]);
+  }
+
+  if (empty($_POST["facebook_username"])) {
+    $facebook_username = "";
+  } else {
+    $facebook_username = test_input($_POST["facebook_username"]);
+  }
+
+  if (empty($_POST["department"])) {
+    $department = "";
+  } else {
+    $department = test_input($_POST["department"]);
+  }
+
+  if (empty($_POST["location"])) {
+    $location = "";
+  } else {
+    $location = test_input($_POST["location"]);
   }
 }
 
@@ -66,7 +90,7 @@ function test_input($data) {
 ?>
 
     <div class="main">
-      <form method="" action="">
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <h1>Public profile</h1>
         <br /><br />
         <div class="single-form">
@@ -75,9 +99,10 @@ function test_input($data) {
           <input
             type="text"
             name="name"
-            value=""
+            value="<?php echo $name;?>"
             placeholder="Enter your name"
           />
+          <span class="error">* <?php echo $nameErr;?></span>
           <br /><br />
         </div>
         <div class="single-form">
@@ -85,14 +110,16 @@ function test_input($data) {
           <input
             type="text"
             name="public_email"
-            value=""
+            value="<?php echo $public_email;?>"
             placeholder="Enter your Public email"
           />
+          <span class="error">* <?php echo $public_emailErr;?></span>
           <br /><br />
         </div>
         <div class="single-form">
           <label>URL</label> <br />
-          <input type="text" name="url" value="" placeholder="Enter your url" />
+          <input type="text" name="url" value="<?php echo $url;?>" placeholder="Enter your url" />
+          <span class="error"><?php echo $urlErr;?></span>
           <br /><br />
         </div>
         <div class="single-form">
@@ -102,7 +129,9 @@ function test_input($data) {
             name="bio"
             style="height: 200px"
             placeholder="Enter your bio"
-          ></textarea>
+          >
+          <?php echo $bio;?>
+        </textarea>
           <br /><br />
         </div>
         <div class="single-form">
@@ -110,7 +139,7 @@ function test_input($data) {
           <input
             type="text"
             name="twitter_username"
-            value=""
+            value="<?php echo $twitter_username;?>"
             placeholder="Twitter username"
           />
           <br /><br />
@@ -121,7 +150,7 @@ function test_input($data) {
           <input
             type="text"
             name="linkedIn_username"
-            value=""
+            value="<?php echo $linkedIn_username;?>"
             placeholder="LinkedIn username"
           />
           <br /><br />
@@ -131,7 +160,7 @@ function test_input($data) {
           <input
             type="text"
             name="facebook_username"
-            value=""
+            value="<?php echo $facebook_username;?>"
             placeholder="Facebook username"
           />
           <br /><br />
@@ -141,7 +170,7 @@ function test_input($data) {
           <input
             type="text"
             name="department"
-            value=""
+            value="<?php echo $department;?>"
             placeholder="Enter your department"
           />
           <br /><br />
@@ -151,7 +180,7 @@ function test_input($data) {
           <input
             type="text"
             name="location"
-            value=""
+            value="<?php echo $location;?>"
             placeholder="Enter your location"
           />
           <br /><br />
@@ -168,5 +197,27 @@ function test_input($data) {
         </div>
       </form>
     </div>
+
+<?php
+echo "<h2>Public profile Update Informatin:</h2>";
+echo $name;
+echo "<br>";
+echo $public_email;
+echo "<br>";
+echo $url;
+echo "<br>";
+echo $bio;
+echo "<br>";
+echo $twitter_username;
+echo "<br>";
+echo $linkedIn_username;
+echo "<br>";
+echo $facebook_username;
+echo "<br>";
+echo $department;
+echo "<br>";
+echo $location;
+?>
+<!-- $name = $public_email = $url = $bio = $twitter_username = $linkedIn_username = $facebook_username = $department = $location = ""; -->
   </body>
 </html>
