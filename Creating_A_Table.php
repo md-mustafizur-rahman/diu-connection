@@ -14,7 +14,7 @@ if (!$conn) {
 
 // SQL query to creating a table in (School) database.
 $sql = "CREATE TABLE users (
-name VARCHAR(30) NOT NULL,
+  name VARCHAR(30) NOT NULL,
   public_email VARCHAR(40) NOT NULL,
   url VARCHAR(10),
   bio VARCHAR(30),
