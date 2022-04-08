@@ -11,7 +11,7 @@
   <?php
 // define variables and set to empty values
 $nameErr = $public_emailErr = $urlErr = "";
-$name = $public_email = $url = $bio = $twitter_username = $linkedIn_username = $facebook_username = $department = $location = "";
+$name = $public_email = $url = $bio = $twitter_username = $linkedIn_username = $facebook_username = $department = $location = $submited = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -79,6 +79,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $location = test_input($_POST["location"]);
   }
+
+  $submited = test_input($_POST["submited"]);
 }
 
 function test_input($data) {
@@ -87,7 +89,32 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "diuconnection";
+  
+  // I am Creating a connection here with MySQL.
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+  
+  // I am Checking connection here. 
+  if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    
+    
+  // SQL query to inserting data in students table.
+
+  $sql = "INSERT INTO users (name, public_email, url, bio, twitter_username, linkedIn_username, facebook_username, department, location)
+  VALUES ('$name' , '$public_email' , '$url' , '$bio' , '$twitter_username' , '$linkedIn_username' ,'$facebook_username' , '$department' , '$location')";
+  
+ (mysqli_query($conn, $sql)); 
+    
+  mysqli_close($conn);
+  
 ?>
+
 
     <div class="main">
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -193,31 +220,17 @@ function test_input($data) {
           <br /><br />
         </div>
         <div class="single-form">
-          <input type="submit" name="submit" value="Submit" />
+        <input type="hidden" name="submited" value="Public profile Update Successfully"> 
+        <input type="submit" name="submit" value="Submit">
         </div>
       </form>
     </div>
-
-<?php
-echo "<h2>Public profile Update Informatin:</h2>";
-echo $name;
-echo "<br>";
-echo $public_email;
-echo "<br>";
-echo $url;
-echo "<br>";
-echo $bio;
-echo "<br>";
-echo $twitter_username;
-echo "<br>";
-echo $linkedIn_username;
-echo "<br>";
-echo $facebook_username;
-echo "<br>";
-echo $department;
-echo "<br>";
-echo $location;
+    <?php
+if ($nameErr =="Name is required"){
+echo "Error";
+}else{
+echo $submited; 
+}
 ?>
-<!-- $name = $public_email = $url = $bio = $twitter_username = $linkedIn_username = $facebook_username = $department = $location = ""; -->
   </body>
 </html>
