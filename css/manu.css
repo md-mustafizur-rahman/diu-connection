@@ -121,6 +121,17 @@ i{
   box-shadow: 2px 2px 5px black;
 }
 
+.logoutbtn{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1rem;
+  color: #00a3fe;
+  border: 1px solid #00a3fe;
+
+}
+
 .logout:hover{
   margin-left: 10%;
   width: 80%;
@@ -141,7 +152,7 @@ i{
 }
 @media only screen and (max-width: 945px) {
 .navinner {
-  width: 80%;
+  width: 100%;
   height: 100%;
   /* background-color: crimson; */
   display: flex;

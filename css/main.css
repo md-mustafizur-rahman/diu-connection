@@ -13,13 +13,15 @@
     justify-content: space-around;
     align-items: center;
     width: auto;
-    height: 1000vh;
+    height: auto;
     /* background-image: url(https://images.pexels.com/photos/1568607/pexels-photo-1568607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
      background-position: cover; */
 
     background-color: #00a3fe;
 
 }
+
+
 
 .leftgap {
     width: 20%;
@@ -38,7 +40,8 @@
 .content {
     width: 60%;
     background-color: white;
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
 
 }
 
@@ -155,7 +158,8 @@ form {
     width: 55%;
     height: 60px;
     border-radius: 50px;
-    background-color: rgb(20, 170, 220);
+    background-color: #00a3fe;
+
 }
 
 .postcontentheader {
@@ -189,8 +193,20 @@ form {
 }
 
 .answerbtn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
     width: 40%;
     height: 40px;
+    margin-bottom: 5%;
+    
+}
+.answerbtn1 {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height:100%;
     margin-bottom: 5%;
     background-color: white;
     border-radius: 50px;
@@ -201,10 +217,10 @@ form {
     font-weight: bold;
 }
 
-.answerbtn:hover {
-    width: 40%;
-    height: 40px;
-    margin-bottom: 5%;
+.answerbtn1:hover {
+    width: 100%;
+    height: 100%;
+  
     background-color: white;
     border-radius: 50px;
     outline: none;
@@ -248,16 +264,19 @@ form {
         background: white;
         box-shadow: 1px 1px 10px black;
     }
+   
 }
 
 @media only screen and (max-width: 693px) {
-    .leftgap{
-        width:  10%;
-    }
-    .rightgap{
+    .leftgap {
         width: 10%;
     }
-    .content{
+
+    .rightgap {
+        width: 10%;
+    }
+
+    .content {
         width: 80%;
     }
 
@@ -335,6 +354,7 @@ form {
         width: 80%;
         padding: 5px;
     }
+
     .innercontenttop {
         position: fixed;
         display: flex;
@@ -347,6 +367,7 @@ form {
         border-radius: 50px;
         background-color: rgb(20, 170, 220);
     }
+
     .leftgap {
         width: 0%;
     }
@@ -354,7 +375,8 @@ form {
     .rightgap {
         width: 0%;
     }
-    .content{
+
+    .content {
         width: 100%;
     }
 

@@ -8,11 +8,11 @@ include 'db_connect.php';
         $postform = $_POST['post'];
         $username1 = 'sabbirpegon';
         $name1 = 'MD. MUSTAFIZU RAHAMN';
-        $queryinsert2 = "INSERT INTO `questiondata`( `username`, `name`, `question`) VALUES ('$username1','$name1','$postform')";
+        $queryinsert2 = "INSERT INTO `data1`( `username`, `name`, `info1`) VALUES ('$username1','$name1','$postform')";
         if ($con->query($queryinsert2) === TRUE) {
             echo "Work successfully";
         } else {
-            echo "Error:" . $con->error;
+            echo "Error: " . $con . "<br>" . $con->error;
         }
     }
 
@@ -51,27 +51,19 @@ include 'db_connect.php';
         <div class="content">
             <div class="innercontent">
                 <div class="innercontenttop">
-                    <form action="main.php" method="POST">
-                        <div class="innercontentheader">
-                            <div class="profileimg">
-                                <img style="width: 70%;" src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="">
-                            </div>
+                   
+                        
                             <div class="postsendarea">
-                                <input placeholder="Create a new Qustions" class="postform" type="text" name="post" value="">
-
-
-                                <button name="postbotton" name="postsubmit" class="postbtn">
-                                    <i id="sendicon" class="fa-solid fa-paper-plane"></i>
-                                </button>
+                               <h1 style="color: white; font-size:2rem;">View</h1>
                             </div>
 
                         </div>
-                    </form>
+                    
                 </div>
 
 
                 <?php
-                $selectquery = "SELECT * FROM questiondata";
+                $selectquery = "SELECT * FROM `questiondata`";
                 $query = mysqli_query($con, $selectquery);
 
                 //   $num = mysqli_num_rows($query);
@@ -94,12 +86,12 @@ include 'db_connect.php';
                             </div>
                             <div class="answerarea">
                                 <!-- This Botton will submit the answer. -->
-                                <a class="answerbtn" href="answer.php"> <button class="answerbtn1" name="answerbtn">ANSWER</button></a>
+                                <a class="answerbtn" href="answer.php"> <button  class="answerbtn1" name="answerbtn">ANSWER</button></a>
 
 
                                 <!-- This Botton will view other people answew. -->
                                 <a class="answerbtn" href="view.php">
-                                    <button class="answerbtn1" name="viewbtn">VIEW</button>
+                                <button class="answerbtn1" name="viewbtn">VIEW</button>
                                 </a>
                             </div>
                         </div>

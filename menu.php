@@ -32,19 +32,19 @@
           <ul class="naviconlist">
 
             <li class="innericon">
-              <a href="#">
+              <a href="main.php">
                 <i class="fa-solid fa-house-chimney fa-2x"></i>
               </a>
             </li>
 
             <li class="innericon">
-              <a href="#">
+              <a href="answer.php">
                 <i class="fa-solid fa-file-circle-check fa-2x"></i>
               </a>
             </li>
 
             <li class="innericon">
-              <a href="#">
+              <a href="question.php">
                 <i class="fa-solid fa-clipboard-question fa-2x"></i>
             </li>
 
@@ -80,7 +80,9 @@
         <div class="navouter" id="profileid">
 
 
-          <button class="logout">Logout</button>
+          <a class="logout" href="login.php">
+            <button class="logoutbtn">Logout</button>
+          </a>
         </div>
 
 
