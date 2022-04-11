@@ -3,11 +3,6 @@ include 'db_connect.php';
 include 'checker.php'
 ?>
 
-
-
-}
-
-
 <?php
 //error ehceker veriable
 $invalidemail = "";
