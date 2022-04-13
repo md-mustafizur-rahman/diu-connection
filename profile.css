@@ -11,36 +11,22 @@
    margin: 100px;
 
 }
-/* .head-text li{
-list-style-type: none;
-padding: 0;
-}
-.head-text li a{
-    text-decoration: none;
-    color:black;
-    padding: 15px 20px;
-} */
-
 .sidebar a{
     text-decoration: none;
     margin: 10px;
     padding:5px 20px;
     border-radius: 30px;
    color:white;
-   background:rgb(223, 171, 92);
-
+   background:#00a3fe;
 }
 .box{
     display: flex;
     align-items: center;
     margin: 100px;
-    
 }
 .first-box{
-    /*border: 2px solid black;*/
     margin-left: 10px;
     flex-basis: 50%;
-
 }
 .first-box h1{
     padding: 20px;
@@ -60,49 +46,8 @@ font-family:League Spartan;
     padding:5px 20px;
     border-radius: 30px;
    color:white;
-   background:rgb(223, 171, 92);  
+   background:#00a3fe;  
 }
 .first-box p{
     margin-bottom: 5%;
-}
-@media only screen and (max-width: 930px) {
-    .sidebar a{
-        text-decoration: none;
-        margin: 5px;
-        padding:2px 2px;
-        border-radius: 30px;
-       color:white;
-       background:rgb(223, 171, 92);
-    
-    }
-}
-@media only screen and (max-width: 590px) {
-    .sidebar a{
-        text-decoration: none;
-        margin: 5px;
-        padding:3px 3px;
-        border-radius: 20px;
-       color:white;
-       background:rgb(223, 171, 92);
-    
-    }
-}
-@media only screen and (max-width: 824px) {
-    .header {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        align-items: center;
-        margin: 100px;
-     
-     }
-    .sidebar a{
-        text-decoration: none;
-        margin: 5px;
-        padding:3px 3px;
-        border-radius: 40px;
-       color:white;
-       background:rgb(223, 171, 92);
-    
-    }
 }
