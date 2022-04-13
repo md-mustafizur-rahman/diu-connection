@@ -12,7 +12,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
 
-// SQL query to creating a table in (School) database.
+// SQL query to creating a table in database.
 $sql = "CREATE TABLE users (
   name VARCHAR(30) NOT NULL,
   public_email VARCHAR(40) NOT NULL,
